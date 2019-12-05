@@ -1,8 +1,8 @@
 const fs = require('fs')
 
-const result = fs.readFileSync('./input.txt', 'utf8')
+const fileContent = fs.readFileSync('./input.txt', 'utf8')
 
-const nums = result.split(',').map(n => parseInt(n))
+const nums = fileContent.split(',').map(n => parseInt(n))
 
 const calcPos0 = (inputNums, num1, num2) => {
   const nums = [...inputNums]

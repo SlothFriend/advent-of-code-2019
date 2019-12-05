@@ -1,8 +1,8 @@
 const fs = require('fs')
 
-const result = fs.readFileSync('./input.txt', 'utf8')
+const fileContent = fs.readFileSync('./input.txt', 'utf8')
 
-const masses = result.split('\n').map(n => parseInt(n)).filter(n => !isNaN(n))
+const masses = fileContent.split('\n').map(n => parseInt(n)).filter(n => !isNaN(n))
 
 // const fuelNeeded = masses.reduce((total, mass) => {
 //   const toAdd = Math.floor(mass / 3) - 2
